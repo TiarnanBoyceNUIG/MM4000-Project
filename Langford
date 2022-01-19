@@ -1,0 +1,30 @@
+def options(n):
+    arrays.append([])
+    o = l - (n + 1)
+    for i in range(o):
+        arrays[g-1].append([])
+        for j in range(i):
+            arrays[g-1][i].append(0)
+        arrays[g-1][i].append(1)
+        for j in range(g):
+            arrays[g-1][i].append(0)
+        arrays[g-1][i].append(1)
+        for j in range(l-(i + g + 2)):
+            arrays[g-1][i].append(0)
+
+def langford(n):
+    global l
+    l = 2*n
+    global arrays
+    arrays = []
+    global g
+    for i in range(n):
+        g = i+1
+        options(g)
+    memory = []
+    for i in range(l):
+        memory.append(0)
+    
+    print(memory)
+        
+langford(4)
